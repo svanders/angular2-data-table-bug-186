@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div class="col-xs-12">
+    <div class="panel panel-default">
+      <div class="panel-heading">Install New Meter</div>
+
+      <datatable class='material striped'
+                 [rows]='rows'
+                 [options]='options'>
+        <datatable-column name="Name">
+          <template let-value="value" let-row="row">
+            <a (click)="onSelect(row)">{{value}}</a>
+          </template>
+        </datatable-column>
+        <datatable-column name="Count">
+          <template let-row="row" let-value="value">
+            {{value}}
+          </template>
+        </datatable-column>
+      </datatable>
+    </div>
+  </div>
+</div>
